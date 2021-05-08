@@ -1,5 +1,5 @@
-1
-let monTab = ["Adil","Agim","Ali","Antoine","Chris","Elvis","Fanny","Haroune","Ilias D","Ilias El","Jean","Kevin","Lira","Mouna","Nasila","Nathan","Seif","Stan","Van Hoa","Yassine"];
+// 1
+// let monTab = ["Adil","Agim","Ali","Antoine","Chris","Elvis","Fanny","Haroune","Ilias D","Ilias El","Jean","Kevin","Lira","Mouna","Nasila","Nathan","Seif","Stan","Van Hoa","Yassine"];
 
 // METHODE FOR
 
@@ -66,10 +66,20 @@ let monTab = ["Adil","Agim","Ali","Antoine","Chris","Elvis","Fanny","Haroune","I
 // - ## Exo 4
 //     ## Créer un tableau avec les prénoms des gens de la classe
 //     ## Avec l'aide d'une boucle, mettre les prénoms ayant plus de 5 caractères dans un second tableau qui se nomme 'longPrenoms'
+
+
 // let monTab = ["Adil","Agim","Ali","Antoine","Chris","Elvis","Fanny","Haroune","Ilias D","Ilias El","Jean","Kevin","Lira","Mouna","Nasila","Nathan","Seif","Stan","Van Hoa","Yassine"];
+
 // let longPrenoms = [];
 
+// for(let i = 0; i < monTab.length; i++){
+//     if(monTab[i].length > 5){
+//         longPrenoms.push(monTab[i]);
+//     }
+// }
 
+// console.log(monTab);
+// console.log(longPrenoms);
 
 
 
@@ -78,47 +88,56 @@ let monTab = ["Adil","Agim","Ali","Antoine","Chris","Elvis","Fanny","Haroune","I
 
 // - ## Exo 5
 //     ##  Créer un tableau qui se nomme 'sommes' avec une multitude de valeurs numérique
-//         let sommes = [14, 7 , 97, 65 , 247 , 67 , 101 , 4 , 34 ,78 , 1 ,900 , 0, 11 , 32 , 23 , 61];
+
+        let sommes = [14, 7 , 97, 65 , 247 , 67 , 101 , 4 , 34 ,78 , 1 ,900 , 0, 11 , 32 , 23 , 61];
+
 //     ## créer un tableau qui se nomme 'grossesSommes'. Si la valeur excède 60, pousser les dans ce tableau et les retirer du tableau sommes
 
-// let sommes = [14, 7 , 97, 65 , 247 , 67 , 101 , 4 , 34 ,78 , 1 ,900 , 0, 11 , 32 , 23 , 61];
-// let grossesSommes = [];
-
-// for(i in sommes){
-//     if(sommes[i] > 60){
-//         grossesSommes.push(sommes[i]);
-//     }
-// }
-// // => un tableau grossesSommes qui est rempli
-
-// for (i in grossesSommes) {
-//     sommes.splice(sommes.indexOf(grossesSommes[i]), 1);
-// }
-
-// for (let i = sommes.length; i>=0 ; i--) {
-//     if(sommes[i] > 60){
-//         grossesSommes.push(sommes[i]);
-//         sommes.splice(i, 1);
-//     }
-// }
-
-// console.log(sommes);
-// console.log(grossesSommes);
+let grosseSommes = [14, 7 , 97, 65 , 247 , 67 , 101 , 4 , 34 ,78 , 1 ,900 , 0, 11 , 32 , 23 , 61];
 
 
+for(i in sommes){
+    if(sommes[i] > 60){
+        grosseSommes.push(sommes[i]);
+    }
+}
 
-// let tab = [15, 56, 65, 8, 42, 50];
-// let tabGdNb = [];
+// => un tableau grossesSommes qui est rempli
 
-// for (let i = 0; i<tab.length; i++) {
-//     if(tab[i] >= 50){
-//         tabGdNb.push(tab[i]);
-//         tab.splice(i, 1);
-//     }
-// }
+for(i in grosseSommes){
+    sommes.splice(sommes.indexOf(grosseSommes[i], 1));
+}
 
-// console.log(tab)
-// console.log(tabGdNb)
+for (i in grossesSommes) {
+    sommes.splice(sommes.indexOf(grossesSommes[i]), 1);
+}
+
+for (let i = sommes.length; i>=0 ; i--) {
+    if(sommes[i] > 60){
+        grossesSommes.push(sommes[i]);
+        sommes.splice(i, 1);
+    }
+}
+
+console.log(sommes);
+console.log(grossesSommes);
+
+
+
+let tab = [15, 56, 65, 8, 42, 50];
+let tabGdNb = [];
+
+for (let i = 0; i<tab.length; i++) {
+    if(tab[i] >= 50){
+        tabGdNb.push(tab[i]);
+        tab.splice(i, 1);
+    }
+}
+
+console.log(tab)
+console.log(tabGdNb)
+
+
 
 
 
